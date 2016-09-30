@@ -1,48 +1,49 @@
-import ddf.minim.*;
-import ddf.minim.analysis.*;
-import ddf.minim.effects.*;
-import ddf.minim.signals.*;
-import ddf.minim.spi.*;
-import ddf.minim.ugens.*;
-//idea 1:3D Music Library & A Art Button
-PImage k;
-PImage j;
-PImage f;
-PImage r;
-float X = 100;
-float Y = 100;
-float W = 150;
-float H = 80;
-Minim minim;
-AudioPlayer player;
-
-void setup() 
+//Colors:
+//Pink
+float X = 0;
+float Y = 0;
+float W = 100;
+float H = 100;
+//Color One: Pink
+color Pink = color(255, 200, 200);
+//Blue
+float X2 = 100;
+float Y2 = 0;
+//Color Two: Blue
+color Blue = color(42, 94, 178);
+PImage Pencil_Icon;
+void setup()
 {
   fullScreen();
-  noStroke();
-  imageMode(CENTER);
-  k = loadImage("The_Greatest_(featuring_Kendrick_Lamar)_(Official_Single_Cover)_by_Sia.png");
-  j = loadImage("ACDC_Back_in_Black.png");
-  f = loadImage("220px-Welcome_to_the_Black_Parade_cover.jpg");
-  r = loadImage("takemethere.jpg");
-  minim = new Minim(this);
-  player = minim.loadFile("06 Back In Black.mp3", 2048);
+  background(255);
+  Pencil_Icon = loadImage("20305-single-0ww-xs.png");
+  noSmooth();
+  stroke(0);
 }
-
-void draw() 
+void draw()
 {
-  background(51); 
-  image(j, mouseX, height/2, mouseY/2+10, mouseY/2+10);
-  image(r, mouseX-80, height/2, mouseY/4, mouseY/4);
-  int inverseX = width-mouseX;
-  int inverseY = height-mouseY;
-  image(k, inverseX, height/2, (inverseY/2)+10, (inverseY/2)+10);
-  image(f, inverseX - 80, height/2, (inverseY/4)+10, (inverseY/4)+10);
+  rect(X, Y, W, H);
+    fill(Blue);
+  //image(Pencil_Icon, 0, 0);// Add Later on the right side of screen
+  rect(X2, Y2, W, H);
+  fill(255, 200, 200);
+  if (mousePressed)
+    {
+      line(mouseX, mouseY, pmouseX, pmouseY);
+    }
   if (mousePressed)
   {
-    if (mouseX >= mouseX && mouseX <= mouseX + height/2 && mouseY >= mouseY/2+10 );
-    {   
-      player.play();
+    if (mouseX>= X && mouseX <= X+W && mouseY >= Y && mouseY <= Y+H)
+    {
+      stroke(Pink);
     }
   }
+  if (mousePressed)
+  {
+    if (mouseX>= X2 && mouseX <= X2+W && mouseY >= Y2 && mouseY <= Y2+H)
+    {
+      stroke(Blue);
+    }
+  }
+  //Add Color Black
 }

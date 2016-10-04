@@ -6,4 +6,4 @@
 <h2> Why did I choose this? </h2>
 <p2> I choose to make my painting project because that was something I've always to try and do in processing but I chose to go in the direction of music though now I've decided that as of now I want to divert my attention towards trying new things in paint programs like a music player and different brush strokes which I haven't done before.
 <h2> ScreenShots</h2>
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/B6unA"><a href="//imgur.com/B6unA"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+<img src = "http://imgur.com/6fD9wTW">
